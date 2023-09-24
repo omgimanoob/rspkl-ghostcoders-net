@@ -1119,7 +1119,7 @@
       </trans-unit>
       <trans-unit id="dicW36D" resname="mark_as_exported">
         <source>mark_as_exported</source>
-        <target>Mark as exported</target>
+        <target>Mark as approved</target>
       </trans-unit>
       <trans-unit id="o0hsx2H" resname="mark_as_open">
         <source>mark_as_open</source>
@@ -1338,7 +1338,7 @@
       </trans-unit>
       <trans-unit id="Qn2ouiL" resname="exported">
         <source>exported</source>
-        <target>Exported</target>
+        <target>Approved</target>
       </trans-unit>
       <trans-unit id="_DDecAV" resname="entryState.exported">
         <source>entryState.exported</source>
