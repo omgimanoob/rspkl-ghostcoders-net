@@ -83,11 +83,16 @@ final class ActivityType extends AbstractType
         ]);
 
         $resolver->setDefault('api_data', function (Options $options) {
+            $val = [
+                'select' => 'metaFields_rspkl_subactivity_value',
+                'route' => 'get_subactivities',
+                'route_params' => ['activity' => '%activity%', 'visible' => true],
+                'empty_route_params' => ['globals' => 'true', 'visible' => true],
+            ];
             if (false !== $options['allow_create']) {
-                return ['create' => 'post_activity'];
+                $val['create'] = 'post_activity';
             }
-
-            return [];
+            return $val; 
         });
 
         $resolver->setDefault('query_builder', function (Options $options) {
