@@ -83,11 +83,27 @@ final class ActivityType extends AbstractType
         ]);
 
         $resolver->setDefault('api_data', function (Options $options) {
+            // if (false !== $options['allow_create']) {
+            //     return ['create' => 'post_activity'];
+            // }
+
+            // return [];
+            $name = 'activity';
+            $activity_visibility = true;
+            $val = [
+                // 'create' => 'post_activity',
+                'select' => 'metaFields_rspkl_subactivity_value',
+                'route' => 'get_subactivities',
+                // 'route' => 'get_activities',
+                'route_params' => [$name => '%' . $name . '%', 'visible' => $activity_visibility],
+                'empty_route_params' => ['globals' => 'true', 'visible' => $activity_visibility],
+            ];
             if (false !== $options['allow_create']) {
-                return ['create' => 'post_activity'];
+                // return ['create' => 'post_activity'];
+                $val['create'] = 'post_activity';
             }
 
-            return [];
+            return $val;            
         });
 
         $resolver->setDefault('query_builder', function (Options $options) {

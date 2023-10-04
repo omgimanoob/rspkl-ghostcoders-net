@@ -1,0 +1,78 @@
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[2]!./assets/sass/_export-pdf.scss ***!
+  \*************************************************************************************************************************************************************************************************/
+/*
+ * This file is part of the Kimai time-tracking app.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+body {
+  font-family: sans-serif;
+  font-size: 10pt;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+table.items {
+  border: 0.1mm solid #000000;
+  width: 100%;
+  font-size: 9pt;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 7px;
+}
+
+td {
+  vertical-align: top;
+}
+
+.items td {
+  border-left: 0.1mm solid #000000;
+  border-right: 0.1mm solid #000000;
+}
+
+.items tr.even {
+  background-color: #f5f5f5;
+}
+
+.items tr.summary {
+  background-color: #efefef;
+}
+
+.items tr.summary td {
+  font-weight: bold;
+  border-top: 0.1mm solid #000000;
+  border-bottom: 0.1mm solid #000000;
+}
+
+table thead th {
+  background-color: #ececec;
+  border: 0.1mm solid #000000;
+  font-weight: bold;
+  font-size: 10pt;
+  text-align: left;
+}
+
+.items td.totals {
+  font-weight: bold;
+  border: 0.1mm solid #000000;
+}
+
+.items .center,
+.items td.duration,
+.items td.cost {
+  text-align: center;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXhwb3J0LXBkZi5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBQUE7Ozs7O0VBQUE7QUFPQTtFQUNJO0VBQ0E7RUFDQTtFQUNBO0FBQUo7O0FBRUE7RUFDSTtBQUNKOztBQUNBO0VBQ0k7RUFDQTtFQUNBO0VBQ0E7QUFFSjs7QUFBQTtFQUNJO0FBR0o7O0FBREE7RUFDSTtBQUlKOztBQUZBO0VBQ0k7RUFDQTtBQUtKOztBQUhBO0VBQ0k7QUFNSjs7QUFKQTtFQUNJO0FBT0o7O0FBTEE7RUFDSTtFQUNBO0VBQ0E7QUFRSjs7QUFOQTtFQUNJO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7QUFTSjs7QUFQQTtFQUNJO0VBQ0E7QUFVSjs7QUFSQTs7O0VBR0k7QUFXSjs7QUFUQTtFQUNJO0FBWUosQyIsInNvdXJjZXMiOlsid2VicGFjazovL2tpbWFpMi8uL2Fzc2V0cy9zYXNzL19leHBvcnQtcGRmLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiLypcbiAqIFRoaXMgZmlsZSBpcyBwYXJ0IG9mIHRoZSBLaW1haSB0aW1lLXRyYWNraW5nIGFwcC5cbiAqXG4gKiBGb3IgdGhlIGZ1bGwgY29weXJpZ2h0IGFuZCBsaWNlbnNlIGluZm9ybWF0aW9uLCBwbGVhc2UgdmlldyB0aGUgTElDRU5TRVxuICogZmlsZSB0aGF0IHdhcyBkaXN0cmlidXRlZCB3aXRoIHRoaXMgc291cmNlIGNvZGUuXG4gKi9cblxuYm9keSB7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gICAgZm9udC1zaXplOiAxMHB0O1xuICAgIG1hcmdpbjogMDtcbiAgICBwYWRkaW5nOiAwO1xufVxucCB7XG4gICAgbWFyZ2luOiAwO1xufVxudGFibGUuaXRlbXMge1xuICAgIGJvcmRlcjogMC4xbW0gc29saWQgIzAwMDAwMDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBmb250LXNpemU6IDlwdDtcbiAgICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xufVxudGQsIHRoIHtcbiAgICBwYWRkaW5nOiA3cHg7XG59XG50ZCB7XG4gICAgdmVydGljYWwtYWxpZ246IHRvcDtcbn1cbi5pdGVtcyB0ZCB7XG4gICAgYm9yZGVyLWxlZnQ6IDAuMW1tIHNvbGlkICMwMDAwMDA7XG4gICAgYm9yZGVyLXJpZ2h0OiAwLjFtbSBzb2xpZCAjMDAwMDAwO1xufVxuLml0ZW1zIHRyLmV2ZW4ge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmNWY1ZjU7XG59XG4uaXRlbXMgdHIuc3VtbWFyeSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2VmZWZlZjtcbn1cbi5pdGVtcyB0ci5zdW1tYXJ5IHRkIHtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICBib3JkZXItdG9wOiAwLjFtbSBzb2xpZCAjMDAwMDAwO1xuICAgIGJvcmRlci1ib3R0b206IDAuMW1tIHNvbGlkICMwMDAwMDA7XG59XG50YWJsZSB0aGVhZCB0aCB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2VjZWNlYztcbiAgICBib3JkZXI6IDAuMW1tIHNvbGlkICMwMDAwMDA7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgZm9udC1zaXplOiAxMHB0O1xuICAgIHRleHQtYWxpZ246IGxlZnQ7XG59XG4uaXRlbXMgdGQudG90YWxzIHtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICBib3JkZXI6IDAuMW1tIHNvbGlkICMwMDAwMDA7XG59XG4uaXRlbXMgLmNlbnRlcixcbi5pdGVtcyB0ZC5kdXJhdGlvbixcbi5pdGVtcyB0ZC5jb3N0IHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4udGV4dC1ub3dyYXAge1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG59XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/

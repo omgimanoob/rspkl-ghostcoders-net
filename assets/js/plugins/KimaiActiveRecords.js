@@ -166,10 +166,12 @@ export default class KimaiActiveRecords extends KimaiPlugin {
      */
     _replaceInNode(node, timesheet)
     {
+        
         const date = this.getDateUtils();
         const allReplacer = node.querySelectorAll('[data-replacer]');
         for (let link of allReplacer) {
             const replacerName = link.dataset['replacer'];
+console.log(`replacerName: ${replacerName}`)
             if (replacerName === 'url') {
                 link.dataset['href'] = node.dataset['href'].replace('000', timesheet.id);
             } else if (replacerName === 'activity') {

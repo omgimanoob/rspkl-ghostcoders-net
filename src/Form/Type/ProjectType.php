@@ -73,6 +73,7 @@ final class ProjectType extends AbstractType
             'query_builder_for_user' => true,
             'activity_enabled' => false,
             'activity_select' => 'activity',
+            // 'activity_select' => 'rspkl_subactivity',
             'activity_visibility' => ActivityQuery::SHOW_VISIBLE,
             'ignore_date' => false,
             'join_customer' => false,
@@ -123,7 +124,8 @@ final class ProjectType extends AbstractType
                 $name = \is_string($options['activity_enabled']) ? $options['activity_enabled'] : 'project';
 
                 return [
-                    'select' => $options['activity_select'],
+                    // 'select' => $options['activity_select'],
+                    'select' => 'metaFields_rspkl_subactivity_value',
                     'route' => 'get_activities',
                     'route_params' => [$name => '%' . $name . '%', 'visible' => $options['activity_visibility']],
                     'empty_route_params' => ['globals' => 'true', 'visible' => $options['activity_visibility']],

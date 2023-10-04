@@ -73,6 +73,8 @@ export default class KimaiTimesheetForm extends KimaiFormPlugin {
 
     activateForm(form)
     {
+
+console.log('activate form')
         if (!this.supportsForm(form)) {
             return;
         }

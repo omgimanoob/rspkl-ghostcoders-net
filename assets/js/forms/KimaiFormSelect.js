@@ -432,7 +432,8 @@ export default class KimaiFormSelect extends KimaiFormPlugin {
                 if (event.target === null || !event.target.matches(selector)) {
                     return;
                 }
-
+// timesheet_edit_form_timesheet_edit_form_metaFields_rspkl_subactivity_value
+// timesheet_edit_form_metaFields_rspkl_subactivity_value
                 const apiSelect = event.target;
                 const targetSelectId = '#' + apiSelect.dataset['relatedSelect'];
                 /** @type {HTMLSelectElement} targetSelect */
@@ -460,6 +461,11 @@ export default class KimaiFormSelect extends KimaiFormPlugin {
 
                 const selectValue = apiSelect.value;
 
+
+console.log(`newApiUrl:`, newApiUrl ?? null,
+    `\ntargetSelect:`, targetSelect ?? null,
+    `\nselectValue: ${selectValue}\n\n`
+    )
                 // Problem: select a project with activities and then select a customer that has no project
                 // results in a wrong URL, it triggers "activities?project=" instead of using the "emptyUrl"
                 if (selectValue === undefined || selectValue === null || selectValue === '' || (Array.isArray(selectValue) && selectValue.length === 0)) {
@@ -498,6 +504,7 @@ export default class KimaiFormSelect extends KimaiFormPlugin {
     {
         let newApiUrl = apiUrl;
 
+
         apiUrl.split('?')[1].split('&').forEach(item => {
             const [key, value] = item.split('='); // eslint-disable-line no-unused-vars
             const decoded = decodeURIComponent(value);
@@ -507,12 +514,17 @@ export default class KimaiFormSelect extends KimaiFormPlugin {
                 const targetFieldName = (formPrefix + originalFieldName).replace(/\[/, '').replace(/]/, '');
                 const targetField = document.getElementById(targetFieldName);
                 let newValue = '';
+console.log(`\n\n------------------------\n` +
+`newApiUrl:` + newApiUrl ?? null,
+`targetField:`, targetField ?? null,
+`\ntargetField.value: ${targetField?.value ?? null}`)
                 if (targetField === null) {
                     // happens for example:
                     // - in duration only mode, when the end field is not found
                     // console.log('ERROR: Cannot find field with name "' + test[1] + '" by selector: #' + formPrefix + test[1]);
                 } else {
                     if (targetField.value !== null) {
+                   
                         newValue = targetField.value;
                         if (targetField.tagName === 'SELECT' && targetField.multiple) {
                             newValue = [...targetField.selectedOptions].map(o => o.value);
